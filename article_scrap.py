@@ -1,4 +1,5 @@
 #following piece of code extracts article from brief section of TOI(Times of India)
+from tts import t2s
 from newspaper import Article 
 from bs4 import BeautifulSoup
 import requests
@@ -7,8 +8,8 @@ import random
 def get_random_article():
     link=requests.get("https://timesofindia.indiatimes.com/briefs")
     soup=BeautifulSoup(link.content,'html.parser')
-    res=soup.find(id='content')
-    briefs = res.find_all('div', class_='brief_box')
+    #res=soup.find(id='content')
+    #briefs = res.find_all('div', class_='brief_box')
     links = []
     for link in soup.find_all('div',attrs={"class":"brief_box"}):
         if(link.find('a')):
@@ -34,9 +35,10 @@ def get_article_text(toi_article):
     t=toi_article.text 
     return t
 
-# art=get_random_article() 
-# text=get_article_text(art)
-# title=get_article_title(art)
-# print(type(art))   
-# print(title.strip())
-# print(text.strip())
+art=get_random_article() 
+text=get_article_text(art)
+title=get_article_title(art)
+print(type(art))   
+print(title.strip('\n'))
+print(text.strip('\n'))
+t2s(text.strip('\n'))
