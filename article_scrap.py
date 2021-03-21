@@ -35,10 +35,10 @@ def get_article_text(toi_article):
     t=toi_article.text 
     return t
 
-art=get_random_article() 
-text=get_article_text(art)
-title=get_article_title(art)
-print(type(art))   
-print(title.strip('\n'))
-print(text.strip('\n'))
-t2s(text.strip('\n'))
+#art=get_random_article() 
+#text=get_article_text(art)
+#title=get_article_title(art)
+# print(type(art))   
+# print(title.strip('\n'))
+# print(text.strip('\n'))
+# t2s(text.strip('\n'))

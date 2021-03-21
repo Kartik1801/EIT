@@ -15,8 +15,7 @@ r = sr.Recognizer()
 # Loop infinitely for user to 
 # speak 
 
-while(1):	 
-	
+def s2t():	 
 	# Exception handling to handle 
 	# exceptions at the runtime 
 	try: 
@@ -45,3 +44,4 @@ while(1):
 		
 	except sr.UnknownValueError: 
 		print("unknown error occured") 
+s2t()		
