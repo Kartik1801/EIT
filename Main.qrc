@@ -1,0 +1,28 @@
+<RCC>
+  <qresource prefix="Assets">
+    <file>Assets/apps.png</file>
+    <file>Assets/baseline_volume_up_black_18dp.png</file>
+    <file>Assets/big-dictionary.png</file>
+    <file>Assets/dices.png</file>
+    <file>Assets/home (1).png</file>
+    <file>Assets/home.png</file>
+    <file>Assets/letter-v-button-of-square-shape-with-one-rounded-corner (1).png</file>
+    <file>Assets/letter-v-button-of-square-shape-with-one-rounded-corner (2).png</file>
+    <file>Assets/letter-v-button-of-square-shape-with-one-rounded-corner.png</file>
+    <file>Assets/light-bulb.png</file>
+    <file>Assets/magnifiying-glass.png</file>
+    <file>Assets/apps.png</file>
+    <file>Assets/baseline_volume_up_black_18dp.png</file>
+    <file>Assets/big-dictionary.png</file>
+    <file>Assets/dices.png</file>
+    <file>Assets/home (1).png</file>
+    <file>Assets/home.png</file>
+    <file>Assets/letter-v-button-of-square-shape-with-one-rounded-corner (1).png</file>
+    <file>Assets/letter-v-button-of-square-shape-with-one-rounded-corner (2).png</file>
+    <file>Assets/letter-v-button-of-square-shape-with-one-rounded-corner.png</file>
+    <file>Assets/light-bulb.png</file>
+    <file>Assets/like.png</file>
+    <file>Assets/logout (1).png</file>
+    <file>Assets/magnifiying-glass.png</file>
+  </qresource>
+</RCC>

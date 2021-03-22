@@ -6,4 +6,4 @@ def t2s(word):
         pronunciation.save("a.mp3")
         p =os.path.abspath("a.mp3")
         playsound.playsound(p,True)
-        
+                
