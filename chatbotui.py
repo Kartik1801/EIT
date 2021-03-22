@@ -11,38 +11,40 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.setWindowModality(QtCore.Qt.NonModal)
-        Form.resize(300, 400)
-        Form.setMinimumSize(QtCore.QSize(300, 400))
-        Form.setMaximumSize(QtCore.QSize(300, 500))
-        self.textBrowser = QtWidgets.QTextBrowser(Form)
-        self.textBrowser.setGeometry(QtCore.QRect(0, 0, 301, 271))
-        self.textBrowser.setObjectName("textBrowser")
-        self.textEdit = QtWidgets.QTextEdit(Form)
-        self.textEdit.setGeometry(QtCore.QRect(0, 270, 241, 31))
-        self.textEdit.setMinimumSize(QtCore.QSize(2, 2))
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(500, 500)
+        MainWindow.setMinimumSize(QtCore.QSize(500, 500))
+        MainWindow.setMaximumSize(QtCore.QSize(500, 500))
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.chat_input = QtWidgets.QLineEdit(self.centralwidget)
+        self.chat_input.setGeometry(QtCore.QRect(0, 460, 420, 40))
+        self.chat_input.setObjectName("chat_input")
+        self.send_button = QtWidgets.QPushButton(self.centralwidget)
+        self.send_button.setGeometry(QtCore.QRect(420, 460, 80, 40))
+        self.send_button.setStyleSheet("font: 11pt \"Consolas\";\n"
+"background:rgb(170, 3, 84);\n"
+"color: rgb(255, 255, 255);\n"
+"")
+        self.send_button.setObjectName("send_button")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(0, 0, 501, 461))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textEdit.sizePolicy().hasHeightForWidth())
+        self.textEdit.setSizePolicy(sizePolicy)
+        self.textEdit.setMinimumSize(QtCore.QSize(501, 461))
+        self.textEdit.setMaximumSize(QtCore.QSize(501, 461))
         self.textEdit.setObjectName("textEdit")
-        self.pushButton = QtWidgets.QPushButton(Form)
-        self.pushButton.setGeometry(QtCore.QRect(240, 270, 61, 31))
-        self.pushButton.setStyleSheet("background:rgb(181, 0, 81);\n"
-"color:rgb(255, 255, 255);\n"
-"font: 75 italic 12pt \"Courier\";")
-        self.pushButton.setObjectName("pushButton")
+        MainWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "CHATBOT"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">I am a chatbot</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">I am very friendly </span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt; font-weight:600;\">lets chat</span></p></body></html>"))
-        self.pushButton.setText(_translate("Form", "SEND"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.send_button.setText(_translate("MainWindow", "SEND"))
