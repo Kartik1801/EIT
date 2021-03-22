@@ -115,4 +115,4 @@ class Main_Window(QtWidgets.QMainWindow,Ui_MainWindow):
 if __name__=="__main__":
     app=QtWidgets.QApplication(sys.argv)
     window= Main_Window()
-    sys.exit(app.exec())
+    sys.exit(app.exec_())
