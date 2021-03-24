@@ -1,7 +1,5 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
-
-
 # Uncomment the following lines to enable verbose logging
 # import logging
 # logging.basicConfig(level=logging.INFO)
@@ -18,19 +16,7 @@ bot = ChatBot('Buddy',
              preprocessors=['chatterbot.preprocessors.clean_whitespace',
 'chatterbot.preprocessors.unescape_html',
 'chatterbot.preprocessors.convert_to_ascii'])
-corpus_trainer = ChatterBotCorpusTrainer(bot)
-corpus_trainer.train('chatterbot.corpus.english')
+def trainbot(bot):
+    corpus_trainer = ChatterBotCorpusTrainer(bot)
+    corpus_trainer.train('chatterbot.corpus.english')
 
-print('Type something to begin...')
-
-# The following loop will execute each time the user enters input
-while True:
-    try:
-        user_input = input()
-        bot_response = bot.get_response(user_input)
-
-        print(bot_response)
-
-    # Press ctrl-c or ctrl-d on the keyboard to exit
-    except (KeyboardInterrupt, EOFError, SystemExit):
-        break

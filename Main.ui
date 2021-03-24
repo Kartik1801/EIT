@@ -32,7 +32,7 @@
    <string>VOCA : VBT</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="Main.qrc">
+   <iconset>
     <normaloff>:/Assets/Assets/letter-v-button-of-square-shape-with-one-rounded-corner (2).png</normaloff>:/Assets/Assets/letter-v-button-of-square-shape-with-one-rounded-corner (2).png</iconset>
   </property>
   <property name="autoFillBackground">

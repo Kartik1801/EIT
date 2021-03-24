@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>TranslateWindow</class>
+ <widget class="QMainWindow" name="TranslateWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="InputText">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -27,7 +27,7 @@
      <string>TYPE HERE</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit_2">
+   <widget class="QTextEdit" name="TranslatedText">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -40,7 +40,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="ttEnglish">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -58,7 +58,7 @@ background:rgb(255, 0, 68);</string>
      <string>Translate To English</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="ttHindi">
     <property name="geometry">
      <rect>
       <x>300</x>
